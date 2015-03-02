@@ -7,8 +7,8 @@ env:
         - python=2.7 CONDA_PY=27 CONDA_NPY=18
         - python=2.7 CONDA_PY=27 CONDA_NPY=19
 
-    #global:
-    #    - secure: 
+    global:
+        - secure: "UPcC/tR1S+5imEGL3qQDRtNHlNcAwaDCF9WPEZzarI3ukl5P7xfgHbpxbW8ShHCCQmMKywrOQaRngq0z6PnIXG0E8Rks0CJBOD7rwBvk2gTVuXolzHm5MUxmQyy22lOE6Ugmy3pq0VrdU66TNWNNm1QSTALOgMO/eAO1e7vFip4="
 
 install: 
     - source install.sh
@@ -17,4 +17,4 @@ script:
 
 after_success:
     - cp /Users/travis/miniconda/conda-bld/osx-64/*.tar.bz2 .
-      #- binstar -t $BINSTAR_TOKEN upload --force *.tar.bz2
+    - binstar -t $BINSTAR_TOKEN upload --force *.tar.bz2
